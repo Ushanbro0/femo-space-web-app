@@ -9,10 +9,9 @@ import { useAuth } from '../contexts/AuthContext';
 export const VipBadge: React.FC = () => {
     const navigate = useNavigate();
     const { user, refreshUser } = useAuth();
-    const [pricing, setPricing] = useState<any>(null);
     const [loading, setLoading] = useState(true);
     const [buying, setBuying] = useState(false);
-    const [selectedPlan, setSelectedPlan] = useState<number>(1);
+    const [selectedPlan] = useState<number>(1);
     const [success, setSuccess] = useState(false);
 
     useEffect(() => {
@@ -20,14 +19,7 @@ export const VipBadge: React.FC = () => {
     }, []);
 
     const fetchPricing = async () => {
-        try {
-            const data = await vipService.getPricing();
-            setPricing(data);
-        } catch (error) {
-            console.error('Failed to fetch pricing', error);
-        } finally {
-            setLoading(false);
-        }
+        setLoading(false);
     };
 
     const handleBuy = async () => {

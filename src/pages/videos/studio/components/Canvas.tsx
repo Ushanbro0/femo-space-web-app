@@ -80,7 +80,6 @@ export const Canvas: React.FC = () => {
 
 const SourceRenderer: React.FC<{ source: StudioSource }> = ({ source }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
-    const [stream, setStream] = useState<MediaStream | null>(null);
 
     useEffect(() => {
         let currentStream: MediaStream | null = null;
@@ -92,7 +91,6 @@ const SourceRenderer: React.FC<{ source: StudioSource }> = ({ source }) => {
                         video: { width: 1280, height: 720 },
                         audio: false
                     });
-                    setStream(currentStream);
                     if (videoRef.current) {
                         videoRef.current.srcObject = currentStream;
                     }

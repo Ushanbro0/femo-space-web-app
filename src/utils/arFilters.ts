@@ -132,7 +132,7 @@ export const AR_FILTERS: ARFilter[] = [
         thumbnail: '🐱',
         canvasEffect: (ctx, face) => {
             if (!face?.keypoints) return;
-            const { nose, leftEar, rightEar, mouth } = face.keypoints;
+            const { nose, leftEar, rightEar } = face.keypoints;
 
             // Cat nose
             ctx.fillStyle = '#FFB6C1';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Play, Pause, MapPin, Phone, Video as VideoIcon, FileText } from 'lucide-react';
+import { Download, Play, MapPin, FileText } from 'lucide-react';
 import { format } from 'date-fns';
 import { Message } from '../../services/chat.service';
 

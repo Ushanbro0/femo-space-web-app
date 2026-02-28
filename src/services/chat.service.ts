@@ -12,7 +12,7 @@ export interface Participant {
 export interface Chat {
     _id: string;
     participants: Participant[];
-    type: 'direct' | 'group' | 'channel' | 'page' | 'business' | 'ai';
+    type: 'direct' | 'group' | 'channel' | 'page' | 'business' | 'ai' | 'support';
     name?: string;
     avatar?: string;
     description?: string;

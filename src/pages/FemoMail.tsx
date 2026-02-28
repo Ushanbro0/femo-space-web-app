@@ -10,8 +10,6 @@ import {
     Search,
     Archive,
     Star,
-    Clock,
-    MoreVertical,
     ChevronLeft,
     ChevronRight,
     Paperclip,
@@ -20,7 +18,6 @@ import {
     X,
     Maximize2,
     RotateCcw,
-    CheckCircle,
     UserCircle
 } from 'lucide-react';
 import { mailService, Mail } from '../services/mail.service';

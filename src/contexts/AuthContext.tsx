@@ -67,6 +67,7 @@ interface AuthContextType {
   updateUserProfile: (updates: Partial<User>) => void;
   refreshUser: () => Promise<void>;
   authReady: boolean;
+  isAuthLoading: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -277,6 +278,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         updateUserProfile,
         refreshUser,
         authReady,
+        isAuthLoading: !authReady
       }}
     >
       {children}

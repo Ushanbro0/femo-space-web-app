@@ -4,7 +4,6 @@ import { useSocket } from '../contexts/SocketContext';
 import { chatService, Chat as ChatType, Message } from '../services/chat.service';
 import Peer from 'simple-peer';
 import { MessageSquare, Bot, Camera } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 // Components
 import { ChatSidebar } from '../components/chat/ChatSidebar';

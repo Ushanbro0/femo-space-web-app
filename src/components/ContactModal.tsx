@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { X, Mail, Phone, Copy, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 interface ContactModalProps {
@@ -15,7 +15,6 @@ export const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
     const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
     const { isAuthenticated } = useAuth();
     const navigate = useNavigate();
-    const location = useLocation();
 
     const contacts = [
         { type: 'chat', value: 'Start Live Chat', label: 'Instant Support', action: 'chat' },

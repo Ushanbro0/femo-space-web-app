@@ -39,6 +39,7 @@
     "socket.io-client": "^4.8.3",
     "tailwind-merge": "^3.4.0",
     "three": "^0.182.0",
+    "uuid": "^10.0.0",
     "world-countries": "^5.1.0",
     "zxcvbn": "^4.4.2"
   },
